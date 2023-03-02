@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Comfortaa", cursive;
+	color: rgb(97, 218, 251);
+	user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background-color: #282c34;
+}
+.JustCards {
+	/* width: 100vw; */
+	/* height: 100vh; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background: rgb(30, 26, 22);
+}
+.card {
+	width: 200px;
+	height: 300px;
+	border-radius: 15px;
+	border: 5px solid rgb(97, 218, 251);
+	margin: 10px;
+	cursor: grab;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+.scrolllock {
+	scrollbar-width: none;
+}
+.scrolllock::-webkit-scrollbar {
+	display: none;
+}
+.app {
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}
+.board {
+	width: 50%;
+	max-width: 300px;
+	/* width: ; */
+	min-height: 50%;
+	max-height: 50%;
+	/* height: 500px; */
+	overflow-y: scroll;
+	height: fit-content;
+	/* border: 5px solid rgb(97, 218, 251); */
+	/* border-left: 5px solid rgb(97, 218, 251); */
+	padding: 0 10px;
+	/* border-radius: 15px; */
+	margin: 3px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	scrollbar-width: none;
+}
+.board::-webkit-scrollbar {
+	display: none;
+}
+.board__title {
+	text-align: center;
+	padding: 3vw 0;
+	font-size: 3vw;
+	font-weight: 700;
+}
+.item__title {
+	font-size: 2.5vw;
+}
+@media (min-width: 700px) {
+	.board__title {
+		padding: 20px 0;
+		font-size: 21px;
+	}
+	.item__title {
+		font-size: 17px;
+	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.addNewWrap {
+	width: fit-content;
+	margin: 0 auto;
+	padding: 20px 0 0;
+	margin-bottom: 20px;
+	text-align: center;
+	border-bottom: 1px solid rgb(97, 218, 251);
+}
+.addNewWrap input {
+	font-size: 15px;
+	color: rgb(255, 255, 255);
+	padding: 10px;
+	border: none;
+	outline: none;
+	background: none;
+}
+.addNewWrap button {
+	color: rgb(97, 218, 251);
+	padding: 10px;
+	cursor: pointer;
+	background: none;
+	border: 1px solid rgb(97, 218, 251);
+	border-bottom: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* .howMuchLeft {
+	height: 30px;
+} */
+/* .howMuchLeft button {
+	color: black;
+	padding: 10px;
+} */
+.filterLeftWrap {
+	/* width: 200px; */
+	background: rgb(0, 0, 0);
+	height: 20px;
+	margin: 0 auto;
 }
-
-.App-link {
-  color: #61dafb;
+.filterLeft {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 30px;
+	background: rgb(106, 252, 10);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filterLeftOrange {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 30px;
+	background: rgba(107, 252, 10, 0.5);
+	/* background: rgb(230, 187, 0); */
 }
